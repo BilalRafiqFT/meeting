@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Comfortaa;
+    src: url(font/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+
+.primary-color {
+    color: #0e2449;
+}
+
+.bg-primary-color {
+    background-color: #0e2449 !important;
+}
+
+body {
+    font-family: Comfortaa;
+    height: 100vh;
+}
+
+.btn-primary {
+    background-color: #0e2449 !important;
+    border: none !important;
+}
+/* Navbar */
+.navbar {
+    background-color: #0e2449 !important;
+    color: #d7e9f5 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+/* Table */
+.table-striped tbody tr:nth-of-type(odd) {
+    color: #0e2449 !important;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #0e2449 !important;
+    color: #d7e9f5 !important;
+}
+
+    .table-striped tbody tr:nth-of-type(even) .btn-primary {
+        color: #0e2449 !important;
+        background-color: #d7e9f5 !important;
+    }
+
+.table-striped tbody tr:nth-of-type(odd) .btn-primary {
+    background-color: #0e2449 !important;
+    color: #d7e9f5 !important;
+}
+
+footer p {
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+
+.vertical-nav ul li {
+    list-style-type: none !important;
+    color: #ffffff !important;
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+
+    .vertical-nav ul li a {
+        color: #ffffff !important;
+        margin-top: 10px;
+    }
+.bottom-stick {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
