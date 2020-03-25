@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace meeting.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AppointmentsController : ControllerBase
