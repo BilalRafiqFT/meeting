@@ -29,6 +29,64 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\font\Comfortaa\Comfortaa-VariableFont_wght.ttf" />
+    <Content Remove="wwwroot\font\Comfortaa\OFL.txt" />
+    <Content Remove="wwwroot\font\Comfortaa\README.txt" />
+    <Content Remove="wwwroot\font\Comfortaa\static\Comfortaa-Bold.ttf" />
+    <Content Remove="wwwroot\font\Comfortaa\static\Comfortaa-Light.ttf" />
+    <Content Remove="wwwroot\font\Comfortaa\static\Comfortaa-Medium.ttf" />
+    <Content Remove="wwwroot\font\Comfortaa\static\Comfortaa-Regular.ttf" />
+    <Content Remove="wwwroot\font\Comfortaa\static\Comfortaa-SemiBold.ttf" />
+    <Content Remove="wwwroot\font\roboto\NOTICE.txt" />
+    <Content Remove="wwwroot\font\roboto\Roboto-Black.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-BlackItalic.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-Bold.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-BoldCondensed.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-BoldCondensedItalic.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-BoldItalic.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-Condensed.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-CondensedItalic.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-Italic.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-Light.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-LightItalic.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-Medium.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-MediumItalic.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-Regular.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-Thin.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto-ThinItalic.ttf" />
+    <Content Remove="wwwroot\font\roboto\Roboto_Specimen_Book.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\font\Comfortaa\Comfortaa-VariableFont_wght.ttf" />
+    <None Include="wwwroot\font\Comfortaa\OFL.txt" />
+    <None Include="wwwroot\font\Comfortaa\README.txt" />
+    <None Include="wwwroot\font\Comfortaa\static\Comfortaa-Bold.ttf" />
+    <None Include="wwwroot\font\Comfortaa\static\Comfortaa-Light.ttf" />
+    <None Include="wwwroot\font\Comfortaa\static\Comfortaa-Medium.ttf" />
+    <None Include="wwwroot\font\Comfortaa\static\Comfortaa-Regular.ttf" />
+    <None Include="wwwroot\font\Comfortaa\static\Comfortaa-SemiBold.ttf" />
+    <None Include="wwwroot\font\roboto\NOTICE.txt" />
+    <None Include="wwwroot\font\roboto\Roboto-Black.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-BlackItalic.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-Bold.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-BoldCondensed.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-BoldCondensedItalic.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-BoldItalic.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-Condensed.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-CondensedItalic.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-Italic.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-Light.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-LightItalic.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-Medium.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-MediumItalic.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-Regular.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-Thin.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto-ThinItalic.ttf" />
+    <None Include="wwwroot\font\roboto\Roboto_Specimen_Book.pdf" />
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

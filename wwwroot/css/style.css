@@ -1,0 +1,164 @@
+@font-face {
+	font-family: Comfortaa;
+	src: url(../font/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+  }
+.primary-color
+{
+	color: #0e2449;
+}
+body
+{
+	font-family:Comfortaa;
+	height: 100vh;
+}
+.btn-primary
+{
+	background-color: #0e2449 !important;
+	border: none !important;
+}
+/* Background */
+.main img
+{
+	max-width: 100%;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+	opacity: 0.2;
+}
+
+/* Image-section */
+.image-section img
+{
+	width:86%;
+}
+.text-area  
+{
+	width: 90%;
+	overflow: hidden;
+	font-size: 0.8rem;
+}
+.line-clamp 
+{
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;  
+}
+
+/* Form-section */
+
+.form-section
+{
+	background-color: #ffffff;
+}
+.form-control
+{
+	border: none !important;
+	border-bottom: 1px solid #0e2449 !important;
+	border-radius: 0 !important;
+}
+.btn:focus   {
+	border-color: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+  }
+.form-control:focus {
+	border-color: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+  }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+/* Pills Section */
+ .pill-01
+{
+	border-radius: 30px 0px 0px 30px !important;
+	font-size: smaller;
+	color:	#0e2449 !important;
+	background-color: #d7e9f5 !important;
+	outline: none;
+}
+ .pill-02
+{
+	border-radius: 0px 30px 30px 0px !important;
+	font-size: smaller;
+	color:	#0e2449 !important;
+	background-color: #d7e9f5 !important;
+	outline: none;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+{
+	color:	#d7e9f5 !important;
+	background-color: #0e2449 !important;
+
+}
+
+/* Check Box */
+.option-input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	position: relative;
+	top: 13.33333px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 16px;
+	width: 16px;
+	transition: all 0.15s ease-out 0s;
+	background: #d7e9f5;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 0.5rem;
+	outline: none;
+	position: relative;
+	z-index: 1000;
+  }
+  .option-input:hover {
+	background: #d7e9f5;
+	border-bottom: none;
+  }
+  .option-input:checked {
+	background: #d7e9f5;
+  }
+  .option-input:checked::before {
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	content: '✔';
+	display: inline-block;
+	font-size: 14px;
+	text-align: center;
+	line-height: 15px;
+	color: #0e2449;
+  }
+  .option-input:checked::after {
+	-webkit-animation: click-wave 0.65s;
+	-moz-animation: click-wave 0.65s;
+	animation: click-wave 0.65s;
+	background:  #a9a2a2;
+	content: '';
+	display: block;
+	position: relative;
+	z-index: 100;
+  }
+  .checkbox-text
+  {
+	  font-size: 14px;
+	  position: absolute;
+	  top: 59px;
+  
+  }
+/* Footer Icon Section */
+  .icon-section p
+  {
+	font-size: 0.8rem;
+  }

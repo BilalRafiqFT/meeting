@@ -26,7 +26,7 @@ export class NavMenu extends Component {
       return (
           <div className="container-fluid px-0">
                   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                      <a className="navbar-brand" href="#"><img src="./images/meetup-logo (1).png" alt="im-fluid" className="w-25" />
+                      <a className="navbar-brand" href="#"><img src="./images/meetup-logo (1).png" alt="im-fluid" className="w-75" />
                           </a>
                           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                               <span className="navbar-toggler-icon"></span>

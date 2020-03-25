@@ -1,12 +1,12 @@
 ﻿@using Microsoft.AspNetCore.Mvc.ViewEngines
-@using Microsoft.AspNetCore.Hosting Environment
+@using Microsoft.AspNetCore.Hosting
 @inject ICompositeViewEngine Engine
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - meeting</title>
+    <title>Teleorb</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.css" />
@@ -16,47 +16,201 @@
               asp-fallback-href="~/Identity/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
     </environment>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
     <link rel="stylesheet" href="~/Identity/css/site.css" />
+    <link href="~/css/style.css" rel="stylesheet" />
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-light navbar-toggleable-sm bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" href="~/">meeting</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    @{
-                        var result = Engine.FindView(ViewContext, "_LoginPartial", isMainPage: false);
-                    }
-                    @if (result.Success)
-                    {
-                        await Html.RenderPartialAsync("_LoginPartial");
-                    }
-                    else
-                    {
-                        throw new InvalidOperationException("The default Identity UI layout requires a partial view '_LoginPartial' " +
-                            "usually located at '/Pages/_LoginPartial' or at '/Views/Shared/_LoginPartial' to work. Based on your configuration " +
-                            $"we have looked at it in the following locations: {System.Environment.NewLine}{string.Join(System.Environment.NewLine, result.SearchedLocations)}.");
-                    }
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center vh-100 no-gutter">
+            <!-- Image Section Start-->
+            <div class="col-7">
+                <div class="image-section">
+                    <img src="~/images/4587.png" alt="img-fluid">
+                </div>
+                <div class="text-section">
+                    <p class="text-area line-clamp">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit modi sapiente distinctio accusantium vero explicabo cum,
+                        sunt consectetur
+                    </p>
+                    <div class="pill-section d-flex justify-content-start">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active pill-01" id="pills--tab" data-toggle="pill" href="#pills-signin" role="tab" aria-controls="pills-signin" aria-selected="true">Make Appointment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pill-02" id="pills-signup-tab" data-toggle="pill" href="#pills-signup" role="tab" aria-controls="pills-signup" aria-selected="false">Sign In as Doctor</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
+            <!-- Image Section end-->
+            <!-- Form Section Start-->
+            <div class="col-5">
+                <div class="form-section shadow rounded py-4 px-5">
+                        <div class="field-section">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-signin" role="tabpanel" aria-labelledby="pills-signin-tab">
+                                    <div class="signin-section row">
+                                        <div class="col-12">
+                                            <h4 class="primary-color text-center ">Make Appointment</h4>
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="text" class="form-control mb-0 mt-5" id="Username" aria-describedby="text" required placeholder=" Your Name">
+                                        </div>
+                                        <div class="col-12">
+                                            <select class="form-control mb-0 mt-5" >
+                                                <option>Select Department</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <select class="form-control mb-0 mt-5" >
+                                                <option>Select Doctor</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <input placeholder=" Select Tour Date" class="form-control mb-0 mt-5" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-center">
+                                            <button type="submit" class="btn btn-primary my-5">Check Available Doctors</button>
+                                        </div>
 
-    <div class="container">
-        <partial name="_CookieConsentPartial" optional />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-    <footer class="footer border-top text-muted">
-        <div class="container">
-            &copy; 2020 - meeting - <a asp-area="" asp-page="Privacy">Privacy</a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-signup" role="tabpanel" aria-labelledby="pills-signup-tab">
+                                    <partial name="_CookieConsentPartial" optional />
+                                    <main role="main" class="pb-3">
+                                        @RenderBody()
+                                    </main>
+                                    @*<main role="main" class="pb-3">
+
+                                            </main>
+                                            <div class="signin-section">
+                                            <div class="col-12">
+                                                <h4 class="primary-color text-center">Sign In</h4>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="mb-0 mt-5" for="name">Username</label>
+                                                <input type="text" class="form-control " id="name" aria-describedby="text" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="mb-0 mt-5" for="password">Password</label>
+                                                <input type="password" class="form-control " id="password" aria-describedby="password" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <input type="checkbox" class="option-input checkbox mb-0 mt-5" />
+                                                <label for="" class="checkbox-text">Remember Me</label>
+                                            </div>
+                                            <div class="col-12 d-flex justify-content-center">
+                                                <button type="submit" class="btn btn-primary my-5">Submit</button>
+                                            </div>
+
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            <!-- Form Section End -->
         </div>
-    </footer>
+
+        <!-- Footer Icon Section Start-->
+        <div class="row d-flex justify-content-center align-items-center no-gutter my-5">
+            <div class="col-12 text-center">
+                <small>Best in healthcare</small>
+                <h4>Center of Excellence</h4>
+            </div>
+            <div class="col-12 my-5">
+                <div class="row icon-section">
+                    <div class="col-4">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-4 px-0 text-center">
+                                <img src="~/images/virus.png" alt="img-fluid" class="w-50">
+                            </div>
+                            <div class="col-8 px-0 align-middle">
+                                <p class="bold m-0">Team-based care</p>
+                                <small class="">Lorem ipsum dolor sit, amet consectetur.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-4 px-0 text-center">
+                                <img src="~/images/chemistry.png" alt="img-fluid" class="w-50">
+                            </div>
+                            <div class="col-8 px-0 align-middle">
+                                <p class="bold m-0">Team-based care</p>
+                                <small class="">Lorem ipsum dolor sit, amet consectetur.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-4 px-0 text-center">
+                                <img src="~/images/chemical.png" alt="img-fluid" class="w-50">
+                            </div>
+                            <div class="col-8 px-0 align-middle">
+                                <p class="bold m-0">Team-based care</p>
+                                <small class="">Lorem ipsum dolor sit, amet consectetur.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 my-5">
+                <div class="row icon-section">
+                    <div class="col-4">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-4 px-0 text-center">
+                                <img src="~/images/job.png" alt="img-fluid" class="w-50">
+                            </div>
+                            <div class="col-8 px-0 align-middle">
+                                <p class="bold m-0">Team-based care</p>
+                                <small class="">Lorem ipsum dolor sit, amet consectetur.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-4 px-0 text-center">
+                                <img src="~/images/medicine.png" alt="img-fluid" class="w-50">
+                            </div>
+                            <div class="col-8 px-0 align-middle">
+                                <p class="bold m-0">Team-based care</p>
+                                <small class="">Lorem ipsum dolor sit, amet consectetur.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-4 px-0 text-center">
+                                <img src="~/images/stethoscope.png" alt="img-fluid" class="w-50">
+                            </div>
+                            <div class="col-8 px-0 align-middle">
+                                <p class="bold m-0">Team-based care</p>
+                                <small class="">Lorem ipsum dolor sit, amet consectetur.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer Icon Section End -->
+    </div>
+
 
     <environment include="Development">
         <script src="~/Identity/lib/jquery/dist/jquery.js"></script>
@@ -76,6 +230,8 @@
                 integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
     </environment>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="~/Identity/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
