@@ -48,7 +48,7 @@ render() {
     const { clientId, callFrom, callModal, callWindow, localSrc, peerSrc } = this.state;
     let contents = this.state.loading
         ? <p><em>Loading...</em></p>
-        : Home.renderAppointmentsTable(this.state.appointments, 'http://localhost:9000/?doctor='+this.state.userName+'&patient=rehan');
+        : Home.renderAppointmentsTable(this.state.appointments, 'https://meetupcall.herokuapp.com/?doctor='+this.state.userName+'&patient=rehan');
 
     return (
         <div>
